@@ -27,17 +27,17 @@ You can create a container with the docker run command below.
 
 ```bash
 nvidia-docker run --privileged -it \
---gpus all \
--e NVIDIA_DRIVER_CAPABILITIES=all \
--e NVIDIA_VISIBLE_DEVICES=all \
---volume=/tmp/.X11-unix:/tmp/.X11-unix:rw \
---net=host \
---ipc=host \
---shm-size=2gb \
---volume=/your/catkin_ws/path:/home/lidartag \
---name=your docker container name \
---env="DISPLAY=$DISPLAY" \
-your docker image name
+    --gpus all \
+    -e NVIDIA_DRIVER_CAPABILITIES=all \
+    -e NVIDIA_VISIBLE_DEVICES=all \
+    --volume=/tmp/.X11-unix:/tmp/.X11-unix:rw \
+    --net=host \
+    --ipc=host \
+    --shm-size=2gb \
+    --volume=/your/catkin_ws/path:/home/lidartag \
+    --name=your docker container name \
+    --env="DISPLAY=$DISPLAY" \
+    your docker image name
 ```
 
 
