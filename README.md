@@ -23,7 +23,7 @@ docker pull yechanpark5714/lidartag:latest
 You can create a container with the docker run command below.
 
 
-**!! IMPORTANT !!**: The **--volume** should be set to the path to the folder where your lidartag is located, and **the container name** and **image name** should be modified accordingly.
+**!! IMPORTANT !!**: The **--volume** parameter should be set to the directory containing your lidartag path, and you need to update the **container name** and **image name** as appropriate.
 
 ```bash
 nvidia-docker run --privileged -it \
@@ -42,6 +42,27 @@ your docker image name
 
 
 <br/>
+
+# 3. start docker container
+```bash
+    xhost +local:docker
+    sudo docker start <your lidartag container>
+    sudo docker exec -it <your lidartag container> /bin/bash
+ ```
+# 4. build
+
+```bash
+    cd /home/lidartag
+    git clone https://github.com/pyc5714/lidartag.git
+
+    source /opt/ros/melodic/setup.bash
+    catkin_make
+    source /home/lidartag/devel/setup.bash
+
+    roslaunch lidartag LiDARTag_outdoor.launch
+```
+
+
 
 # Acknowledgments
 [LiDARTag](https://github.com/UMich-BipedLab/LiDARTag.git): A Real-Time Fiducial Tag System for Point Clouds
