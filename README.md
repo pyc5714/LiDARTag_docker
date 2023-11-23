@@ -23,7 +23,7 @@ docker pull yechanpark5714/lidartag:latest
 You can create a container with the docker run command below.
 
 
-**!! IMPORTANT !!**: The **--volume** parameter should be set to the directory containing your lidartag path, and you need to update the **container name** and **image name** as appropriate.
+The **--volume** parameter should be set to the directory containing your lidartag path, and you need to update the **container name** and **image name** as appropriate.
 
 ```bash
 nvidia-docker run --privileged -it \
