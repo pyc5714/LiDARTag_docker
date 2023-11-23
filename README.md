@@ -45,21 +45,21 @@ nvidia-docker run --privileged -it \
 
 # 3. start docker container
 ```bash
-    xhost +local:docker
-    sudo docker start <your lidartag container>
-    sudo docker exec -it <your lidartag container> /bin/bash
+xhost +local:docker
+sudo docker start <your lidartag container>
+sudo docker exec -it <your lidartag container> /bin/bash
  ```
 # 4. build
 
 ```bash
-    cd /home/lidartag
-    git clone https://github.com/pyc5714/lidartag.git
+cd /home/lidartag
+git clone https://github.com/pyc5714/lidartag.git
 
-    source /opt/ros/melodic/setup.bash
-    catkin_make
-    source /home/lidartag/devel/setup.bash
+source /opt/ros/melodic/setup.bash
+catkin_make
+source /home/lidartag/devel/setup.bash
 
-    roslaunch lidartag LiDARTag_outdoor.launch
+roslaunch lidartag LiDARTag_outdoor.launch
 ```
 
 
