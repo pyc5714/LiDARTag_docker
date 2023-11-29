@@ -1,8 +1,9 @@
 # 1. build docker image
 
+You can create a docker image using one of the two methods below.
 
 ### 1_1. build docker image with Dockerfile
-You can create a docker image using one of the two methods below.
+
 
 ```bash
 cd your/catkin_ws/
